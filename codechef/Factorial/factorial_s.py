@@ -42,7 +42,7 @@ while i < count:
 
     n = int(raw_input())
     f = fact(n)
-    z = leadz(f)
+    z = leadz_s(f)
 
     #print n, f, z
     print z

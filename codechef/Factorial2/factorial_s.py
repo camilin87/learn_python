@@ -21,52 +21,18 @@ def fact(n):
         fact_result *= fact_cursor
         fact_cursor += 1
 
-    global_fact_cursor = fact_cursor - 1
+    global_fact_cursor = n
     global_fact_result = fact_result
 
     return fact_result
-
-#this calculates the leading zeroes in a rather slow way
-
-
-def leadz(n):
-    result = 0
-
-    while n % 10 == 0:
-        result += 1
-        n /= 10
-
-    return result
-
-
-def leadz_s(n):
-    s = str(n)
-    result = 0
-    i = len(s) - 1
-
-    while i >= 0:
-        if s[i] == '0':
-            result += 1
-        else:
-            break
-        i -= 1
-
-    return result
 
 
 count = int(raw_input())
 
 i = 0
 while i < count:
-    #print leadz(fact(int(raw_input())))
-
     n = int(raw_input())
     f = fact(n)
-    #z = leadz_s(f)
-    #z = leadz(f)
-
-    #print n, f, z
-    print n, f
-    #print z
+    print f
 
     i += 1

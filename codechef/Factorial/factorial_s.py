@@ -1,12 +1,32 @@
+global_fact_cursor = 1
+global_fact_result = 1
+
+
 def fact(n):
-    i = 1
-    result = 1
+    global global_fact_cursor
+    global global_fact_result
 
-    while i <= n:
-        result *= i
-        i += 1
+    #print 'globals', global_fact_cursor, global_fact_result
 
-    return result
+    fact_cursor = global_fact_cursor
+    fact_result = global_fact_result
+
+    #we'll continue where we left off to speed things up
+    #for this particular exercise
+    if n < fact_cursor:
+        fact_cursor = 1
+        fact_result = 1
+
+    while fact_cursor <= n:
+        fact_result *= fact_cursor
+        fact_cursor += 1
+
+    global_fact_cursor = fact_cursor - 1
+    global_fact_result = fact_result
+
+    return fact_result
+
+#this calculates the leading zeroes in a rather slow way
 
 
 def leadz(n):
@@ -43,6 +63,7 @@ while i < count:
     n = int(raw_input())
     f = fact(n)
     z = leadz_s(f)
+    #z = leadz(f)
 
     #print n, f, z
     print z

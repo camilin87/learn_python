@@ -1,3 +1,4 @@
+'''
 def lead_z(n):
     result = 0
     i = 1
@@ -9,6 +10,17 @@ def lead_z(n):
         else:
             result += int(n/five_to_the_i)
         i += 1
+
+    return result
+'''
+
+
+def lead_z(n):
+    result = 0
+
+    while n >= 5:
+        n /= 5
+        result += n
 
     return result
 

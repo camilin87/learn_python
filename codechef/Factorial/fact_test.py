@@ -21,7 +21,7 @@ def fact(n):
         fact_result *= fact_cursor
         fact_cursor += 1
 
-    global_fact_cursor = n
+    global_fact_cursor = fact_cursor - 1
     global_fact_result = fact_result
 
     return fact_result
@@ -62,10 +62,11 @@ while i < count:
 
     n = int(raw_input())
     f = fact(n)
-    z = leadz_s(f)
+    #z = leadz_s(f)
     #z = leadz(f)
 
-    print n, f, z
+    #print n, f, z
+    print n, f
     #print z
 
     i += 1

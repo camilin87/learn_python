@@ -11,7 +11,7 @@ def main(args):
         player_2 = round_values[1]
 
         temp_max_diff = player_1 - player_2
-        if abs(temp_max_diff) > abs(max_diff):
+        if abs(temp_max_diff) >= abs(max_diff):
             max_diff = temp_max_diff
 
 

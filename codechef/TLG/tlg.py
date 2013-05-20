@@ -18,7 +18,7 @@ def main(args):
     if max_diff > 0:
         print 1, max_diff
     else:
-        print 2, -max_diff
+        print 2, abs(max_diff)
 
 if __name__=='__main__':
     main(sys.argv)

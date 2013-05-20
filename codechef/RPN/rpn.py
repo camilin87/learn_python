@@ -8,8 +8,7 @@ def rpn(expr):
     for c in expr:
         if c in l_operators:
             if c == ')':
-                #while len(op_stack) > 0:
-                for i in range(len(op_stack)):
+                for i in xrange(len(op_stack)):
                     op = op_stack.pop()
                     if op == '(':
                         break
